@@ -30,6 +30,22 @@ body {
   background: var(--outgoing-chat-bg);
 }
 
+/* Estilos para el encabezado (nav) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #444654; /* Color de fondo del encabezado */
+  color: #FFFFFF; /* Color del texto */
+  padding: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
 /* Chats container styling */
 .chat-container {
   overflow-y: auto;
