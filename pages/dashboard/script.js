@@ -11,7 +11,6 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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";
 
 const loadDataFromLocalstorage = () => {
   const themeColor = localStorage.getItem("themeColor");
@@ -41,7 +40,7 @@ const createChatElement = (content, className) => {
 };
 
 const getChatResponse = async (incomingChatDiv) => {
-  const API_URL = "https://api.openai.com/v1/completions";
+  const API_URL = "https://content-boost-api.onrender.com/api/v1/chatgpt";
   const pElement = document.createElement("p");
 
   const userPrompt = userText;
@@ -55,22 +54,10 @@ const getChatResponse = async (incomingChatDiv) => {
 
   userText = customPrompt;
 
-  console.log({ userText });
-
   const requestOptions = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "text-davinci-003",
-      prompt: userText,
-      max_tokens: 2048,
-      temperature: 0.2,
-      n: 1,
-      stop: null,
-    }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt: userText }),
   };
 
   try {
@@ -172,6 +159,6 @@ const logout = async () => {
   console.log("LOGOUT");
   localStorage.removeItem("token");
   localStorage.removeItem("userFullname");
-  // localStorage.removeItem("all-chats");
+  localStorage.removeItem("all-chats");
   window.location.href = "../login/login.html";
 };
