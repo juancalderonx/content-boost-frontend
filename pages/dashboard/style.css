@@ -11,10 +11,12 @@
   --icon-color: #acacbe;
   --icon-hover-bg: #5b5e71;
   --placeholder-color: #dcdcdc;
-  --outgoing-chat-bg: #343541;
-  --incoming-chat-bg: #444654;
+  --outgoing-chat-bg: #0c1821;
+  --incoming-chat-bg: #1b2a41;
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
+  /* --outgoing-chat-border: #343541;
+  --incoming-chat-border: #444654; */
 }
 .light-mode {
   --text-color: #343541;
@@ -34,7 +36,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #444654; /* Color de fondo del encabezado */
+  background-color: #102E44; /* Color de fondo del encabezado */
   color: #ffffff; /* Color del texto */
   padding: 10px;
 }

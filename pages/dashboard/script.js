@@ -11,7 +11,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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";
+const API_KEY = "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";
 
 const loadDataFromLocalstorage = () => {
   const themeColor = localStorage.getItem("themeColor");
@@ -98,7 +98,7 @@ const copyResponse = (copyBtn) => {
 const showTypingAnimation = () => {
   const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="../../images/chatbot.jpg" alt="chatbot-img">
+                        <img src="../../images/chatbot.png" alt="chatbot-img">
                         <div class="typing-animation">
                             <div class="typing-dot" style="--delay: 0.2s"></div>
                             <div class="typing-dot" style="--delay: 0.3s"></div>
@@ -123,7 +123,7 @@ const handleOutgoingChat = () => {
 
   const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="../../images/user.jpg" alt="user-img">
+                        <img src="../../images/user.png" alt="user-img">
                         <p>${userText}</p>
                     </div>
                 </div>`;
@@ -172,6 +172,6 @@ const logout = async () => {
   console.log("LOGOUT");
   localStorage.removeItem("token");
   localStorage.removeItem("userFullname");
-  localStorage.removeItem("all-chats");
+  // localStorage.removeItem("all-chats");
   window.location.href = "../login/login.html";
 };
