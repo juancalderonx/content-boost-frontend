@@ -62,7 +62,7 @@ const getChatResponse = async (incomingChatDiv) => {
 
   try {
     const response = await (await fetch(API_URL, requestOptions)).json();
-    pElement.textContent = response.choices[0].text.trim();
+    pElement.textContent = response.message.content.trim();
   } catch (error) {
     pElement.classList.add("error");
     pElement.textContent =
