@@ -9,13 +9,16 @@ const login = async () => {
   const password = document.querySelector("#password").value;
 
   try {
-    const response = await fetch("http://localhost:3023/api/v1/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+      "https://content-boost-api.onrender.com/api/v1/auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      }
+    );
 
     const data = await response.json();
 
@@ -37,13 +40,16 @@ const signUp = async () => {
   const fullname = document.querySelector("#signupFullname").value;
 
   try {
-    const response = await fetch("http://localhost:3023/api/v1/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password, fullname }),
-    });
+    const response = await fetch(
+      "https://content-boost-api.onrender.com/api/v1/auth/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password, fullname }),
+      }
+    );
 
     const data = await response.json();
 
