@@ -172,6 +172,6 @@ const logout = async () => {
   console.log("LOGOUT");
   localStorage.removeItem("token");
   localStorage.removeItem("userFullname");
-  // localStorage.removeItem("all-chats");
+  localStorage.removeItem("all-chats");
   window.location.href = "../login/login.html";
 };
